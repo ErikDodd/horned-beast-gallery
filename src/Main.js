@@ -1,6 +1,7 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import data from './assets/data.json'
+import BeastModal from './BeastModal.js';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -21,6 +22,7 @@ class Main extends React.Component {
                         />
                     );
                 })}
+                <BeastModal showModal={this.state.showModal} setShowModalFalse={this.setShowModalFalse} selectedBeast={this.state.selectedBeast}/>
         </>
         )
     }
