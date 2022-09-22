@@ -30,12 +30,6 @@ class HornedBeast extends React.Component {
     render() {
         return(
             <>
-                <Container>
-                    <Row>
-                        <Col> 1 of 1 </Col>
-                        
-                    </Row>  
-                    
                     <Card>
                         <Card.Img onClick={this.setModal} variant="top" src={this.props.image_url} alt={this.props.description} title={this.props.title}/>
                         <Card.Body>
@@ -45,9 +39,6 @@ class HornedBeast extends React.Component {
                         </Card.Body>
                             <Button variant="primary" onClick={this.addFavorites}>Favorite</Button>
                     </Card>
-                   
-                
-                </Container>
             </>
         )
     }

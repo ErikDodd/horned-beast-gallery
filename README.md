@@ -1,5 +1,5 @@
 
-Number and name of feature: Feature 1: Display Images
+# Number and name of feature: Feature 1: Display Images
 
 Estimate of time needed to complete: 45 mins
 
@@ -19,11 +19,10 @@ Finish time: 5:51 PM
 
 Actual time needed to complete: 1 hour 26 mins
 
-## Attributions:
+## Attributions
 
-Special thank you to Justin Hammerly for reviewing my code for Lab 1 to make sure that I wasn't missing anything. Also for helping me fix my issue with displaying the cards by accessing the data.json and also getting the heart emoji aspect to work for lab2. 
+Special thank you to Justin Hammerly for reviewing my code for Lab 1 to make sure that I wasn't missing anything. Also for helping me fix my issue with displaying the cards by accessing the data.json and also getting the heart emoji aspect to work for lab2.
 
 Special Thank you to Ben Mills for helping me understanding props.
 
-Special Thank you to Megan for sharing her code and helping me with feature 2/in hornedbeast.js. 
-
+Special Thank you to Megan for sharing her code and helping me with feature 2/in hornedbeast.js

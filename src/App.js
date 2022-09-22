@@ -17,6 +17,7 @@ class App extends React.Component {
     this.state = {
       showModal: false,
       selectedBeast: {},
+      filteredBeast: [],
     };
   }
 
@@ -32,11 +33,22 @@ class App extends React.Component {
     this.setState({ showModal: false });
   }
 
+  handleDropDown = (e) => {
+    e.preventDefault();
+    const searchTerm = parseInt(e.target.value);
+    console.log(e.target.value);
+    const filteredBeasts = data.filter((beast) =>
+    beast.description.includes(searchTerm())
+    );
+    this.setState({displayedBeasts: filteredBeasts});
+  };
+
 
   render() {
     return (
       <>
         <Header />
+        <BeastForm handleDropDown={this.handleDropDown}/>
         <Main showModal={this.state.showModal} setShowModalFalse={this.setShowModalFalse} setShowModalTrue={this.setShowModalTrue} selectedBeast={this.state.selectedBeast} />
         <Footer />
       </>
