@@ -5,6 +5,8 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import data from './assets/data.json';
+import BeastForm from "./BeastForm";
+
 
 // extends
 
@@ -21,7 +23,7 @@ class App extends React.Component {
   setShowModalTrue = (key) => {
     this.setState({ showModal: true });
     const filteredBeast = data.filter((beast) => {
-      return beast._id === key;
+      return beast.title === key;
     });
     this.setState({ selectedBeast: filteredBeast[0] });
 
@@ -29,6 +31,7 @@ class App extends React.Component {
   setShowModalFalse = () => {
     this.setState({ showModal: false });
   }
+
 
   render() {
     return (

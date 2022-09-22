@@ -2,12 +2,15 @@ import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import data from './assets/data.json'
 import BeastModal from './BeastModal.js';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
+
 
 
 class Main extends React.Component {
+
+    handleFormSubmit = (event) => {
+        event.preventDefault();
+    }
+
     render() {
         return (
         <>
@@ -24,8 +27,8 @@ class Main extends React.Component {
                         />
                     );
                 })}
-                {this.props.selectedBeast && 
-                    <BeastModal showModal={this.props.showModal} setShowModalTrue={this.props.setShowModalTrue}   setShowModalFalse={this.setShowModalFalse} selectedBeast={this.props.selectedBeast}/>
+                {this.props.showModal && 
+                    <BeastModal showModal={this.props.showModal} setShowModalTrue={this.props.setShowModalTrue}   setShowModalFalse={this.props.setShowModalFalse} selectedBeast={this.props.selectedBeast}/>
                 }
         </>
         )

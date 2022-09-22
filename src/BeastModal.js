@@ -9,7 +9,9 @@ class BeastModal extends React.Component {
                 <Modal.Header closeButton>
                     <Modal.Title>Horned Beast</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>{this.props.selectedBeast.description}</Modal.Body>
+                <Modal.Body>{this.props.selectedBeast.description}
+                        <img src={this.props.selectedBeast.image_url} alt={this.props.alt}></img>
+                </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.props.setShowModalFalse}>
                         Close
