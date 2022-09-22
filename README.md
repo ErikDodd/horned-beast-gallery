@@ -21,7 +21,7 @@ Actual time needed to complete: 1 hour 26 mins
 
 ## Attributions:
 
-Special thank you to Justin Hammerly for reviewing my code for Lab 1 to make sure that I wasn't missing anything. Also for helping me fix my issue with displaying the cards by accessing the data.json and also getting the heart emoji aspect to work. It previously wasn't but now it does.
+Special thank you to Justin Hammerly for reviewing my code for Lab 1 to make sure that I wasn't missing anything. Also for helping me fix my issue with displaying the cards by accessing the data.json and also getting the heart emoji aspect to work for lab2. 
 
 Special Thank you to Ben Mills for helping me understanding props.
 

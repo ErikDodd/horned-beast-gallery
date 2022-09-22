@@ -19,10 +19,14 @@ class Main extends React.Component {
                             description={beast.description}
                             id={beast._id}
                             title={beast.title}
+                            key={index}
+                            setShowModalTrue = {this.props.setShowModalTrue}
                         />
                     );
                 })}
-                <BeastModal showModal={this.state.showModal} setShowModalFalse={this.setShowModalFalse} selectedBeast={this.state.selectedBeast}/>
+                {this.props.selectedBeast && 
+                    <BeastModal showModal={this.props.showModal} setShowModalTrue={this.props.setShowModalTrue}   setShowModalFalse={this.setShowModalFalse} selectedBeast={this.props.selectedBeast}/>
+                }
         </>
         )
     }

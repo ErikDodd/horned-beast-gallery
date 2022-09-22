@@ -1,3 +1,5 @@
+import React from 'react';
+import {Modal, Button} from 'react-bootstrap';
 
 class BeastModal extends React.Component {
     render () {
