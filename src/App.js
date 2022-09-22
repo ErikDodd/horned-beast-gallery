@@ -38,7 +38,7 @@ class App extends React.Component {
     const searchTerm = parseInt(e.target.value);
     console.log(e.target.value);
     const filteredBeasts = data.filter((beast) =>
-    beast.description.includes(searchTerm())
+    beast.description.includes(searchTerm)
     );
     this.setState({displayedBeasts: filteredBeasts});
   };
