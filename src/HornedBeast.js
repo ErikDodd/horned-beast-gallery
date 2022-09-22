@@ -19,12 +19,16 @@ class HornedBeast extends React.Component {
         });
     }
 
+    setModal = () => {
+        this.props.setShowModalTrue(this.props.title)
+    }
+
 
     render() {
         return(
             <>
                 <Card>
-                    <Card.Img variant="top" src={this.props.image_url} alt={this.props.description} title={this.props.title}/>
+                    <Card.Img onClick={this.setModal} variant="top" src={this.props.image_url} alt={this.props.description} title={this.props.title}/>
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>{this.props.description}</Card.Text>
