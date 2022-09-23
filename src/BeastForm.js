@@ -8,13 +8,15 @@ class BeastForm extends React.Component {
         return (
             <>
             <Container>
-                    <Form.Select onChange={this.props.handleDropDown} aria-label="Default select example">
-                        <option>Number of Horns</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Too Many Horns</option>
-                    </Form.Select>
+                <Form>
+                    <Form.Control as ='select' onChange={this.props.handleDropDown} aria-label="Default select example">
+                        <option value="default">Number of Horns</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="100">100</option>
+                    </Form.Control>
+                </Form>
             </Container>
             </>
         )

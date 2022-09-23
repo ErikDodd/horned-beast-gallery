@@ -17,7 +17,7 @@ class App extends React.Component {
     this.state = {
       showModal: false,
       selectedBeast: {},
-      filteredBeast: [],
+      filteredBeast: data,
     };
   }
 
@@ -34,13 +34,16 @@ class App extends React.Component {
   }
 
   handleDropDown = (e) => {
-    e.preventDefault();
-    const searchTerm = parseInt(e.target.value);
+    // e.preventDefault();
+    const numHorns = parseInt(e.target.value);
     console.log(e.target.value);
-    const filteredBeasts = data.filter((beast) =>
-    beast.description.includes(searchTerm)
-    );
-    this.setState({displayedBeasts: filteredBeasts});
+    let gallery = data;
+    if (numHorns) {
+      gallery = data.filter((beast) =>
+      beast.horns === numHorns);
+    }
+    this.setState({filteredBeast: gallery});
+    console.log(gallery);
   };
 
 
@@ -48,8 +51,8 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <BeastForm handleDropDown={this.handleDropDown}/>
-        <Main showModal={this.state.showModal} setShowModalFalse={this.setShowModalFalse} setShowModalTrue={this.setShowModalTrue} selectedBeast={this.state.selectedBeast} />
+        <BeastForm filteredBeast={this.state.filteredBeast} handleDropDown={this.handleDropDown}/>
+        <Main filteredBeast={this.state.filteredBeast}  showModal={this.state.showModal} setShowModalFalse={this.setShowModalFalse} setShowModalTrue={this.setShowModalTrue} selectedBeast={this.state.selectedBeast} />
         <Footer />
       </>
     );
