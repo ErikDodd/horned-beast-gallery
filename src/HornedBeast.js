@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
+
 class HornedBeast extends React.Component {
     constructor(props){
         super(props);
@@ -27,15 +28,15 @@ class HornedBeast extends React.Component {
     render() {
         return(
             <>
-                <Card>
-                    <Card.Img onClick={this.setModal} variant="top" src={this.props.image_url} alt={this.props.description} title={this.props.title}/>
-                    <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Text>{this.props.description}</Card.Text>
-                        <Card.Text>{this.state.favorites}</Card.Text>
-                    </Card.Body>
-                        <Button variant="primary" onClick={this.addFavorites}>Favorite</Button>
-                </Card>
+                    <Card>
+                        <Card.Img onClick={this.setModal} variant="top" src={this.props.image_url} alt={this.props.description} title={this.props.title}/>
+                        <Card.Body>
+                            <Card.Title>{this.props.title}</Card.Title>
+                            <Card.Text>{this.props.description}</Card.Text>
+                            <Card.Text>{this.state.favorites}</Card.Text>
+                        </Card.Body>
+                            <Button variant="primary" onClick={this.addFavorites}>Favorite</Button>
+                    </Card>
             </>
         )
     }
